@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron ."
   },
-  "author": "",
+  "author": "Its Me N.",
   "license": "ISC",
   "dependencies": {
     "cli-alerts": "^1.2.0",
