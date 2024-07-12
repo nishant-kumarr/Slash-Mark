@@ -78,4 +78,6 @@ This will install all the dependencies listed in package.json.
 5. Recorded strokes will be saved in main project directory with file name stamped with date and time. You will be able to see the output file name in the terminal.
 
 
-### Thank You.
+<div> 
+<h2 align = 'right'> Thank You !! </h2>
+</div>
