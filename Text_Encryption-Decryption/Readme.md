@@ -75,3 +75,8 @@ Ensure that your browser supports the Web Crypto API and local storage for the a
 
 ## Scope for further improvement 
 - As our project is dependent on system for storage of key using browsers local storage, we can further improve it to store the key on some server or make the user input the key every time he/she decrypts. Thus, making it system idependent.
+
+
+<div> 
+<h2 align = 'right'> Thank You !! </h2>
+</div>
