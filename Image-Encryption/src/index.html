@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Imcrypt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Imcrypt</h1>
+    <div class = container>
+        <button id="encryptButton">Encrypt</button>
+        <button id="decryptButton">Decrypt</button>
+    </div>
+
+    <script>
+        const encryptButton = document.getElementById('encryptButton');
+        const decryptButton = document.getElementById('decryptButton');
+
+        encryptButton.addEventListener('click', async () => {
+            const filePath = await window.electron.openFileDialog();
+            const outputImageFileName = await window.electron.saveFileDialog('encrypted.png');
+            const outputKeyFileName = await window.electron.saveFileDialog('key.txt');
+            await window.electron.encrypt(filePath, outputImageFileName, outputKeyFileName);
+            alert('Encryption Complete');
+        });
+
+        decryptButton.addEventListener('click', async () => {
+            const filePath = await window.electron.openFileDialog();
+            const keyPath = await window.electron.openFileDialog();
+            const outputImageFileName = await window.electron.saveFileDialog('decrypted.png');
+            await window.electron.decrypt(filePath, keyPath, outputImageFileName);
+            alert('Decryption Complete');
+        });
+    </script>
+</body>
+</html>

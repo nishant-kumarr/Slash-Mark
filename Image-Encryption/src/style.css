@@ -1,0 +1,43 @@
+body {
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh; /* Ensures full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-family: 'Kode Mono', monospace;
+}
+
+h1 {
+    font-size: 5em;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.589);
+    color: white;
+    margin-bottom: 200px; /* Increased space between h1 and buttons */
+}
+
+.container {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between buttons */
+    align-items: center; /* Center align items vertically */
+    gap: 40px; /* Increase the gap between buttons */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: 1px solid rgb(255, 255, 255); /* Example: 1px solid white */
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0); /* Semi-transparent white */
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+}
+
+button:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,19 @@
+{
+  "name": "imcrypt-gui",
+  "version": "1.0.0",
+  "description": "Image encryption and decryption tool with GUI",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cli-alerts": "^1.2.0",
+    "jimp": "^0.16.1",
+    "meow": "^9.0.0"
+  },
+  "devDependencies": {
+    "electron": "^25.2.1"
+  }
+}
