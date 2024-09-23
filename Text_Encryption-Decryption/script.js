@@ -16,7 +16,10 @@ document.getElementById('decryptBtn').addEventListener('click', async () => {
 // Some variables declaration
 const IV_LENGTH = 16; // For AES, this is always 16
 const LOCAL_STORAGE_KEY = 'secureEncryptionKey';
-const MASTER_KEY = 'masterPassword1234';
+const MASTER_KEY = 'masterPassword1234'; 
+                                             // MASTER_KEY is not used directly for encryption. 
+                                            // It serves as a passphrase to derive a secure encryption key 
+                                            // using PBKDF2 before any actual data encryption occurs.
 
 // Helper function to convert array to hex string
 // Random intialisation vector generated as 8 bit int and is getting stored as hex generated as pair of 2 and 0 if masking needed.
